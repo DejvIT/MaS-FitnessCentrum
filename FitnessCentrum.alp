@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.1.0.201706091107" AlpVersion="8.0.4">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.3.2.201807061745" AlpVersion="8.3.1">
 <Model>
 	<Id>1510585504149</Id>
 	<Name><![CDATA[FitnessCentrum]]></Name>
@@ -17,8 +17,6 @@
 			<Id>1510585504155</Id>
 			<Name><![CDATA[Main]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1510585504154</Id>
@@ -44,6 +42,18 @@
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -159,6 +169,37 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1543689381679</Id>
+					<Name><![CDATA[pocetSkriniekMuzi]]></Name>
+					<X>820</X><Y>40</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[20]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1543689396694</Id>
+					<Name><![CDATA[pocetSkriniekZeny]]></Name>
+					<X>820</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[15
+]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 			</Variables>
@@ -296,8 +337,8 @@
 						<Point><X>50</X><Y>-10</Y></Point>
 						<Point><X>100</X><Y>-40</Y></Point>
 						<Point><X>120</X><Y>-60</Y></Point>
-						<Point><X>140</X><Y>-90</Y></Point>
-						<Point><X>180</X><Y>-90</Y></Point>
+						<Point><X>130</X><Y>-80</Y></Point>
+						<Point><X>130</X><Y>-90</Y></Point>
 						<Point><X>170</X><Y>-90</Y></Point>
 					</Points>
 				</Connector>
@@ -499,9 +540,9 @@
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>50</Y></Point>
 						<Point><X>180</X><Y>50</Y></Point>
-						<Point><X>180</X><Y>150</Y></Point>
-						<Point><X>600</X><Y>150</Y></Point>
-						<Point><X>940</X><Y>150</Y></Point>
+						<Point><X>180</X><Y>160</Y></Point>
+						<Point><X>600</X><Y>160</Y></Point>
+						<Point><X>940</X><Y>160</Y></Point>
 						<Point><X>940</X><Y>10</Y></Point>
 					</Points>
 				</Connector>
@@ -537,8 +578,8 @@
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>30</Y></Point>
 						<Point><X>150</X><Y>30</Y></Point>
-						<Point><X>150</X><Y>60</Y></Point>
-						<Point><X>910</X><Y>60</Y></Point>
+						<Point><X>150</X><Y>70</Y></Point>
+						<Point><X>910</X><Y>70</Y></Point>
 						<Point><X>910</X><Y>-80</Y></Point>
 					</Points>
 				</Connector>
@@ -576,72 +617,6 @@
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1512409324293</Id>
-					<Name><![CDATA[connector13]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[muzi]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[cakajuciMuzi]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Queue]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>700</X><Y>90</Y></Point>
-						<Point><X>630</X><Y>90</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1512409339377</Id>
-					<Name><![CDATA[connector15]]></Name>
-					<X>740</X><Y>90</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[muzi]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[moveToStartMuzi]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[MoveTo]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1512409541442</Id>
 					<Name><![CDATA[connector9]]></Name>
 					<X>850</X><Y>180</Y>
@@ -672,72 +647,6 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>100</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1512409544861</Id>
-					<Name><![CDATA[connector12]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[zeny]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[cakajuceZeny]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Queue]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>700</X><Y>180</Y></Point>
-						<Point><X>630</X><Y>180</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1512409562151</Id>
-					<Name><![CDATA[connector14]]></Name>
-					<X>740</X><Y>180</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[zeny]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[moveToStartZeny]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[MoveTo]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -843,6 +752,138 @@
 						<Point><X>100</X><Y>-90</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1543689804856</Id>
+					<Name><![CDATA[connector12]]></Name>
+					<X>630</X><Y>90</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[cakajuciMuzi]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Queue]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[prezliekanieMuzi]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>70</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1543689807306</Id>
+					<Name><![CDATA[connector13]]></Name>
+					<X>630</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[cakajuceZeny]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Queue]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[prezliekanieZeny]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>70</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1543690226795</Id>
+					<Name><![CDATA[connector15]]></Name>
+					<X>740</X><Y>90</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[prezliekanieMuzi]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[moveToStartMuzi]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[MoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>70</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1543690236916</Id>
+					<Name><![CDATA[connector14]]></Name>
+					<X>740</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[prezliekanieZeny]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[fitnesscentrum]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[moveToStartZeny]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[MoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>70</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -855,9 +896,53 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[if ((cakajuciMuzi.size() + cakajuceZeny.size()) < 9) {
+					<Body><![CDATA[if ((cakajuciMuzi.size() + cakajuceZeny.size()) <= 10) {
 	hold.unblock();
 }]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[int]]></ReturnType>
+					<Id>1543689562483</Id>
+					<Name><![CDATA[functionSetCapacityMuzi]]></Name>
+					<X>680</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[prezliekanieMuzi.set_capacity(pocetSkriniekMuzi - (moveToEndMuzi.size() + moveToStartMuzi.size() + prezliekanieMuzi.size()));]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[int]]></ReturnType>
+					<Id>1543689587703</Id>
+					<Name><![CDATA[functionSetCapacityZeny]]></Name>
+					<X>680</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[prezliekanieZeny.set_capacity(pocetSkriniekZeny - (moveToEndZeny.size() + moveToStartZeny.size() + prezliekanieZeny.size()));]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[int]]></ReturnType>
+					<Id>1543692579882</Id>
+					<Name><![CDATA[functionZenamPrednost]]></Name>
+					<X>110</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[jeChlap]]></Name>
+						<Type><![CDATA[boolean]]></Type>
+					</Parameter>
+					<Body><![CDATA[if (!jeChlap && (pocetSkriniekZeny - (moveToEndZeny.size() + moveToStartZeny.size() + prezliekanieZeny.size())) > 0) {
+	return 1;
+}
+
+return 0;]]></Body>
 				</Function>
 			</Functions>
 			<CustomDistributions>
@@ -1483,6 +1568,18 @@
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[changeDimensions]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[length]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[width]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[height]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -1798,9 +1895,6 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maximumCapacity]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
@@ -1850,6 +1944,9 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[priority]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[functionZenamPrednost(agent.jeChlap)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
@@ -2092,7 +2189,7 @@ hdCakaniePokladna.add(time() - agent.zaciatokCakania);
 				<EmbeddedObject>
 					<Id>1510594335543</Id>
 					<Name><![CDATA[muzi]]></Name>
-					<X>700</X><Y>70</Y>
+					<X>540</X><Y>-50</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2146,9 +2243,9 @@ hdCakaniePokladna.add(time() - agent.zaciatokCakania);
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.zaciatokCvicenia = time();
+								<Code><![CDATA[//agent.zaciatokCvicenia = time();
 
-pocetMuzovZaTyzden++;]]></Code>
+//pocetMuzovZaTyzden++;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2157,9 +2254,9 @@ pocetMuzovZaTyzden++;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[priemernyCasCviceniaMuzi.add(time() - agent.zaciatokCvicenia);
+								<Code><![CDATA[//priemernyCasCviceniaMuzi.add(time() - agent.zaciatokCvicenia);
 
-hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
+//hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2212,7 +2309,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 				<EmbeddedObject>
 					<Id>1510594366508</Id>
 					<Name><![CDATA[zeny]]></Name>
-					<X>700</X><Y>160</Y>
+					<X>460</X><Y>-50</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2263,9 +2360,9 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.zaciatokCvicenia = time();
+								<Code><![CDATA[//agent.zaciatokCvicenia = time();
 
-pocetZienZaTyzden++;]]></Code>
+//pocetZienZaTyzden++;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2274,9 +2371,9 @@ pocetZienZaTyzden++;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[priemernyCasCviceniaZeny.add(time() - agent.zaciatokCvicenia);
+								<Code><![CDATA[//priemernyCasCviceniaZeny.add(time() - agent.zaciatokCvicenia);
 
-hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
+//hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -3254,6 +3351,11 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.zaciatokCvicenia = time();
+
+pocetMuzovZaTyzden++;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -3411,6 +3513,11 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.zaciatokCvicenia = time();
+
+pocetZienZaTyzden++;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -3560,7 +3667,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<Parameter>
 							<Name><![CDATA[tripTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[100]]></Code>
+								<Code><![CDATA[triangular( 30, 55, 100 )]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -3578,6 +3685,13 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[priemernyCasCviceniaZeny.add(time() - agent.zaciatokCvicenia);
+
+hdCasVoFitku.add(time() - agent.zaciatokCvicenia);
+
+functionSetCapacityZeny();]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -3724,7 +3838,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<Parameter>
 							<Name><![CDATA[tripTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[100]]></Code>
+								<Code><![CDATA[triangular( 40, 90, 160 )]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -3742,6 +3856,13 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[priemernyCasCviceniaMuzi.add(time() - agent.zaciatokCvicenia);
+
+hdCasVoFitku.add(time() - agent.zaciatokCvicenia);
+
+functionSetCapacityMuzi();]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -3850,7 +3971,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[priemernyCasVSysteme.add(time() - (agent.zaciatokVSysteme + 100.1));]]></Code>
+								<Code><![CDATA[priemernyCasVSysteme.add(time() - (agent.zaciatokVSysteme));]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -3866,6 +3987,218 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<Code><![CDATA[10]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 					</InitialSpeedCode>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1543689325739</Id>
+					<Name><![CDATA[prezliekanieMuzi]]></Name>
+					<X>700</X><Y>70</Y>
+					<Label><X>-25</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[Delay]]></ClassName>
+							<ItemName><![CDATA[1412336242930]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[delayTime]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[triangular(2, 10, 4.5)]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[pocetSkriniekMuzi]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maximumCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[entityLocation]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[pushProtocol]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[forceStatisticsCollection]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[functionSetCapacityMuzi();]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onAtExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRemove]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1543689362177</Id>
+					<Name><![CDATA[prezliekanieZeny]]></Name>
+					<X>700</X><Y>160</Y>
+					<Label><X>-25</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[Delay]]></ClassName>
+							<ItemName><![CDATA[1412336242930]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[delayTime]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[triangular(3, 20, 8)]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[pocetSkriniekZeny]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maximumCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[entityLocation]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[pushProtocol]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[forceStatisticsCollection]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[functionSetCapacityZeny();]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onAtExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRemove]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
@@ -3950,7 +4283,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -3973,7 +4305,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4043,7 +4374,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4073,9 +4403,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -4096,6 +4424,13 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<Point><X>330</X><Y>-220</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<Network>
 					<Id>1512400753721</Id>
@@ -4139,9 +4474,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -4357,6 +4690,13 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<Point><X>69.99999999999994</X><Y>-90</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<Path SourceId="1512400289597" TargetId="1512400313371">
 					<Id>1512400897470</Id>
@@ -4374,9 +4714,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PathType>dashedLine</PathType>
 					
 					<Width Class="UnitValue">
-						<Value Class="Double">
-							1
-						</Value>
+						<Value Class="Double">1</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</Width>
 					<Points>
@@ -4523,6 +4861,13 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<Point><X>-31.369000000000028</X><Y>123.01600000000008</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">10</Value>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
 				</Path>
 				<PointNode>
 					<Id>1512400289597</Id>
@@ -4594,7 +4939,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4617,7 +4961,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4640,7 +4983,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4663,7 +5005,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4686,7 +5027,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4709,7 +5049,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4732,7 +5071,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4755,7 +5093,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4778,7 +5115,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -4803,7 +5139,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>410</X><Y>860</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/table_2.x3d]]></FileName>
+					<FileName><![CDATA[3d/table_2.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -4831,7 +5167,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>330</X><Y>1040</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/door.x3d]]></FileName>
+					<FileName><![CDATA[3d/door.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -4859,7 +5195,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>420</X><Y>1040</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/door.x3d]]></FileName>
+					<FileName><![CDATA[3d/door.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -4887,7 +5223,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>420</X><Y>930</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/door.x3d]]></FileName>
+					<FileName><![CDATA[3d/door.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -4915,7 +5251,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>30</X><Y>1120</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/officeworker.x3d]]></FileName>
+					<FileName><![CDATA[3d/officeworker.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[Material__1__Surf]]></Name>
@@ -4955,7 +5291,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>70</X><Y>1220</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/car.x3d]]></FileName>
+					<FileName><![CDATA[3d/car.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[Material__1__Surf]]></Name>
@@ -4991,7 +5327,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>140</X><Y>1230</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/ambulance_car.x3d]]></FileName>
+					<FileName><![CDATA[3d/ambulance_car.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA___auto_]]></Name>
@@ -5047,7 +5383,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>230</X><Y>1230</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/car.x3d]]></FileName>
+					<FileName><![CDATA[3d/car.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[Material__1__Surf]]></Name>
@@ -5083,7 +5419,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>290</X><Y>1050</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[3d/chair.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5107,7 +5443,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>290</X><Y>1080</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[3d/chair.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5131,7 +5467,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>290</X><Y>1110</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[3d/chair.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5155,7 +5491,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>360</X><Y>1140</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[3d/chair.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5179,7 +5515,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>360</X><Y>1110</Y><Z>10</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[3d/chair.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5203,7 +5539,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>410</X><Y>1120</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/table_3.x3d]]></FileName>
+					<FileName><![CDATA[3d/table_3.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5231,7 +5567,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>450</X><Y>1140</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[3d/chair.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5255,7 +5591,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>390</X><Y>1080</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[3d/chair.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5279,7 +5615,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>460</X><Y>1050</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[3d/chair.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5303,7 +5639,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>400</X><Y>860</Y><Z>20</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/laptop_open_off.x3d]]></FileName>
+					<FileName><![CDATA[3d/laptop_open_off.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_black]]></Name>
@@ -5335,7 +5671,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>430</X><Y>870</Y><Z>20</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/monitor_on.x3d]]></FileName>
+					<FileName><![CDATA[3d/monitor_on.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_27]]></Name>
@@ -5371,7 +5707,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>430</X><Y>860</Y><Z>20</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/keyboard.x3d]]></FileName>
+					<FileName><![CDATA[3d/keyboard.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material]]></Name>
@@ -5399,7 +5735,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>440</X><Y>860</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/computer_on.x3d]]></FileName>
+					<FileName><![CDATA[3d/computer_on.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_4]]></Name>
@@ -5435,7 +5771,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>380</X><Y>860</Y><Z>20</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/phone.x3d]]></FileName>
+					<FileName><![CDATA[3d/phone.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA___LightGray_]]></Name>
@@ -5471,7 +5807,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>310</X><Y>1140</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/locker_3.x3d]]></FileName>
+					<FileName><![CDATA[3d/locker_3.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_11]]></Name>
@@ -5499,7 +5835,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>370</X><Y>1050</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/locker_2.x3d]]></FileName>
+					<FileName><![CDATA[3d/locker_2.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_11]]></Name>
@@ -5527,7 +5863,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>460</X><Y>1100</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/locker_3.x3d]]></FileName>
+					<FileName><![CDATA[3d/locker_3.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_11]]></Name>
@@ -5555,7 +5891,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>360</X><Y>920</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/locker.x3d]]></FileName>
+					<FileName><![CDATA[3d/locker.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_11]]></Name>
@@ -5583,7 +5919,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>300</X><Y>920</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[3d/chair.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5607,7 +5943,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>310</X><Y>830</Y><Z>150</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/security_camera.x3d]]></FileName>
+					<FileName><![CDATA[3d/security_camera.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5639,7 +5975,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>310</X><Y>850</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
+					<FileName><![CDATA[3d/bench.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5663,7 +5999,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>120</X><Y>1130</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
+					<FileName><![CDATA[3d/bench.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5687,7 +6023,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>190</X><Y>1130</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
+					<FileName><![CDATA[3d/bench.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -5711,7 +6047,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>150</X><Y>1040</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/tree_1.x3d]]></FileName>
+					<FileName><![CDATA[3d/tree_1.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_Color_C18]]></Name>
@@ -5743,7 +6079,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>580</X><Y>1290</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/cnc_rolling_machine_3_state_3.x3d]]></FileName>
+					<FileName><![CDATA[3d/cnc_rolling_machine_3_state_3.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material]]></Name>
@@ -5775,7 +6111,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>620</X><Y>890</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/cnc_rolling_machine_1_state_3.x3d]]></FileName>
+					<FileName><![CDATA[3d/cnc_rolling_machine_1_state_3.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_8]]></Name>
@@ -5811,7 +6147,7 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>790</X><Y>890</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/cnc_vertical_machining_center_3_state_1.x3d]]></FileName>
+					<FileName><![CDATA[3d/cnc_vertical_machining_center_3_state_1.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_5]]></Name>
@@ -5849,7 +6185,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -5872,7 +6207,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>0.1</ZHeight>
@@ -5897,15 +6231,13 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="180" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="180" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
-						<ActionCode><![CDATA[muzi.set_capacity((int)value);]]></ActionCode>
+						<ActionCode><![CDATA[pocetSkriniekMuzi = (int)value;]]></ActionCode>
 					</BasicProperties>
 					<ExtendedProperties>
-						<DefaultValueCode><![CDATA[muzi.capacity]]></DefaultValueCode>
+						<DefaultValueCode><![CDATA[pocetSkriniekMuzi]]></DefaultValueCode>
 						<Orientation>HORIZONTAL</Orientation>
 						<MinValue><![CDATA[4]]></MinValue>
 						<MaxValue><![CDATA[40]]></MaxValue>
@@ -5916,20 +6248,18 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1510597845046</Id>
 					<Name><![CDATA[pocetZenskychSkriniek]]></Name>
-					<X>630</X><Y>200</Y>
+					<X>630</X><Y>210</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="180" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="180" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
-						<ActionCode><![CDATA[zeny.set_capacity((int)value);]]></ActionCode>
+						<ActionCode><![CDATA[pocetSkriniekZeny = (int)value;]]></ActionCode>
 					</BasicProperties>
 					<ExtendedProperties>
-						<DefaultValueCode><![CDATA[zeny.capacity]]></DefaultValueCode>
+						<DefaultValueCode><![CDATA[pocetSkriniekZeny]]></DefaultValueCode>
 						<Orientation>HORIZONTAL</Orientation>
 						<MinValue><![CDATA[4]]></MinValue>
 						<MaxValue><![CDATA[40]]></MaxValue>
@@ -5945,10 +6275,8 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="100" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="100" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[koeficientVstupu = (int)value;]]></ActionCode>
 					</BasicProperties>
@@ -6061,7 +6389,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<DataItem>
 					<Expression><![CDATA[priemernyCasCakaniaPokladna.mean()]]></Expression>
@@ -6120,7 +6447,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<DataItem>
 					<Expression><![CDATA[obsluha.utilization()*100]]></Expression>
@@ -6179,7 +6505,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<ShowPDF>true</ShowPDF>
 					<ShowCDF>false</ShowCDF>
@@ -6281,8 +6606,6 @@ hdCasVoFitku.add(time() - agent.zaciatokCvicenia);]]></Code>
 			<Id>1510587033297</Id>
 			<Name><![CDATA[MojClovek]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<StartupCode><![CDATA[if (jeChlap == false)
 	obj3DMale.setVisible(false);
 else obj3DFemale.setVisible(false);]]></StartupCode>
@@ -6311,6 +6634,18 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -6516,7 +6851,6 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -6531,7 +6865,6 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<ZHeight>10</ZHeight>
@@ -6584,7 +6917,7 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>0</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/person.x3d]]></FileName>
+					<FileName><![CDATA[3d/person.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[Material__3__Surf]]></Name>
@@ -6628,7 +6961,7 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>0</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/woman_2.x3d]]></FileName>
+					<FileName><![CDATA[3d/woman_2.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_Color_009]]></Name>
@@ -6673,8 +7006,6 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 			<Id>1512144404499</Id>
 			<Name><![CDATA[AnimaciaObsluha]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1512144404498</Id>
@@ -6700,6 +7031,18 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
 					<EnableSteps>false</EnableSteps>
@@ -6788,7 +7131,7 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>0</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/woman_1.x3d]]></FileName>
+					<FileName><![CDATA[3d/woman_1.dae]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[MA_material]]></Name>
@@ -6877,7 +7220,8 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 			<ExecutionMode>realTimeScaled</ExecutionMode>
 			<RealTimeScale>1.0</RealTimeScale>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
-			<Maximized>false</Maximized>
+			<EnableDeveloperPanel>false</EnableDeveloperPanel>
+			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 		</AnimationProperties>
 		<Inputs>		
 		</Inputs>
@@ -6890,8 +7234,6 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 			<Id>1510585504185</Id>
 			<Name><![CDATA[Simulation]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<MaximumMemory>512</MaximumMemory>
 			<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
@@ -6912,7 +7254,6 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -6936,15 +7277,13 @@ else obj3DFemale.setVisible(false);]]></StartupCode>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="100" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="100" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[if ( getState() == IDLE )
 	run();
-getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
+getExperimentHost().setPresentable( getEngine().getRoot() );]]></ActionCode>
 					</BasicProperties>
 					<ExtendedProperties>
 						<Font Name="Dialog" Size="11" Style="0"/>
@@ -6958,35 +7297,13 @@ getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
 
 			<Parameters>			
 			</Parameters>			
-			<PresentationProperties 
-				EnableAdaptiveFrameManagement="true" 
-				EnableAntiAliasing="true"
-				EnableEnhancedModelElementsAnimation="true"
-				ToolbarCustomizableAtRuntime="true">
-				<Maximized>true</Maximized>
-				<CloseConfirmation>false</CloseConfirmation>
+			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
-				<CpuRatio><![CDATA[ratio_1_2]]></CpuRatio>	        
 				<Title><![CDATA[FitnessCentrum : Simulation]]></Title>	
-				<FramesPerSecond><![CDATA[20.0]]></FramesPerSecond>
+				<EnableDeveloperPanel>true</EnableDeveloperPanel>
+				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 				<RealTimeScale>1.0</RealTimeScale>
-				<UIProperty Name="Experiment Progress" Value="false"/>
-				<UIProperty Name="Simulation Progress" Value="true"/>
-				<UIProperty Name="Statusbar Events Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Frames Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Memory" Value="true"/>
-				<UIProperty Name="Statusbar Model Date" Value="true"/>
-				<UIProperty Name="Statusbar Model Step" Value="false"/>
-				<UIProperty Name="Statusbar Model Time" Value="true"/>
-				<UIProperty Name="Statusbar Real Time Of Simulation" Value="false"/>
-				<UIProperty Name="Statusbar Status" Value="true"/>
-				<UIProperty Name="Toolbar Animation setup" Value="false"/>
-				<UIProperty Name="Toolbar Execution control" Value="true"/>
-				<UIProperty Name="Toolbar File" Value="false"/>
-				<UIProperty Name="Toolbar Model navigation" Value="true"/>
-				<UIProperty Name="Toolbar Time scale setup" Value="true"/>
-				<UIProperty Name="Toolbar View" Value="false"/>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Stop at specified date]]></StopOption>
@@ -7001,8 +7318,6 @@ getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
 			<Id>1510596118597</Id>
 			<Name><![CDATA[Replikacie]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<MaximumMemory>512</MaximumMemory>
 			<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
@@ -7297,7 +7612,6 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -7319,7 +7633,6 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -7341,7 +7654,6 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -7363,7 +7675,6 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -7387,10 +7698,8 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="100" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="100" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor/>
 						<Enabled>true</Enabled>
 						<EnableExpression><![CDATA[getState() == IDLE]]></EnableExpression>
@@ -7410,10 +7719,8 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="250" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="250" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[textVstupnehoToku.setText("Zvysenie vstupneho toku: "
  + String.format("%.0f", value*100) + "%");]]></ActionCode>
@@ -7435,10 +7742,8 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="230" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="230" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[textPocetMuzskychSkriniek.setText("Pocet muzskych skriniek: "
  + String.format("%.0f", value));]]></ActionCode>
@@ -7460,10 +7765,8 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="230" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
+					<BasicProperties Width="230" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 						<ActionCode><![CDATA[textPocetZenskychSkriniek.setText("Pocet zenskych skriniek: "
  + String.format("%.0f", value));]]></ActionCode>
@@ -7521,7 +7824,6 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
 					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
@@ -7606,7 +7908,6 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
 						<TextColor>-12566464</TextColor>
 					</Labels>
-					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
 					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
@@ -7640,28 +7941,11 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
 				<FinalDate><![CDATA[1511125200000]]></FinalDate>	
 				<FinalTime><![CDATA[9360.0]]></FinalTime>	
 			</ModelTimeProperties>
-			<PresentationProperties 
-				EnableAdaptiveFrameManagement="true" 
-				EnableAntiAliasing="true"
-				EnableEnhancedModelElementsAnimation="true"
-				ToolbarCustomizableAtRuntime="true">
-				<Maximized>true</Maximized>
-				<CloseConfirmation>false</CloseConfirmation>
+			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
-				<CpuRatio><![CDATA[ratio_1_2]]></CpuRatio>	        
-				<Title><![CDATA[FitnessCentrum : Replikacie]]></Title>	
-				<FramesPerSecond><![CDATA[20.0]]></FramesPerSecond>
-				<UIProperty Name="Experiment Progress" Value="true"/>
-				<UIProperty Name="Simulation Progress" Value="true"/>
-				<UIProperty Name="Statusbar Events Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Frames Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Memory" Value="true"/>
-				<UIProperty Name="Statusbar Real Time Of Simulation" Value="true"/>
-				<UIProperty Name="Statusbar Status" Value="true"/>
-				<UIProperty Name="Toolbar Animation setup" Value="false"/>
-				<UIProperty Name="Toolbar Execution control" Value="true"/>
-				<UIProperty Name="Toolbar File" Value="false"/>
-				<UIProperty Name="Toolbar View" Value="false"/>
+				<Title><![CDATA[FitnessCentrum : Replikacie]]></Title>
+				<EnableDeveloperPanel>true</EnableDeveloperPanel>
+				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 			</PresentationProperties>
 			<ReplicationsProperties>
 				<UseReplication>true</UseReplication>
