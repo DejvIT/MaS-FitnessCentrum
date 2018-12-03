@@ -8087,7 +8087,7 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
     			<Plot>
 					<Id>1512141825245</Id>
 					<Name><![CDATA[cas]]></Name>
-					<X>800</X><Y>360</Y>
+					<X>880</X><Y>360</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8231,7 +8231,7 @@ tfExportCakanie.println(priemernyCasCakaniaPokladna.count() + " " + root.hdCakan
     			<Plot>
 					<Id>1512411616248</Id>
 					<Name><![CDATA[cakaniePokladna]]></Name>
-					<X>800</X><Y>40</Y>
+					<X>880</X><Y>40</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
